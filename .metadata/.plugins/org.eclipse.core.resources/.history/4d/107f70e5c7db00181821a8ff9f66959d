@@ -1,0 +1,42 @@
+package view;
+
+import java.awt.EventQueue;
+
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+
+public class JDBoleta extends JDialog {
+	private JLabel lblNombre;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					JDBoleta dialog = new JDBoleta();
+					dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+					dialog.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public JDBoleta() {
+		setUndecorated(true);
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(null);
+		
+		lblNombre = new JLabel("Nombre:");
+		lblNombre.setBounds(24, 23, 46, 14);
+		getContentPane().add(lblNombre);
+
+	}
+
+}
